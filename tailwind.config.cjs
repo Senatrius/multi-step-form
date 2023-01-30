@@ -23,7 +23,8 @@ module.exports = {
       neutral: 'hsl(229, 24%, 87%)',
       bg: 'hsl(217, 100%, 97%)',
       component: 'hsl(231, 100%, 99%)',
-      white: 'white'
+      white: 'white',
+      transparent: 'transparent'
     },
     fontSize: {
       'm-title': [

@@ -1,12 +1,12 @@
-
+import { FormWrapper } from './components/FormWrapper';
+import { Stepper } from './components/Stepper';
 
 function App() {
-
   return (
     <div>
-      Hello
+      <Stepper />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
