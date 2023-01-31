@@ -27,61 +27,25 @@ module.exports = {
       transparent: 'transparent'
     },
     fontSize: {
-      'm-title': [
-        '1.5rem',
-        {
-          fontWeight: 700
-        }
-      ],
-      'd-title': [
-        '2rem',
-        {
-          fontWeight: 700
-        }
-      ],
+      'm-title': '1.5rem',
+      'd-title': '2rem',
       paragraph: [
         '1rem',
         {
-          fontWeight: 400,
           lineHeight: '156%'
         }
       ],
-      'm-small': [
-        '0.75rem',
-        {
-          fontWeight: 400
-        }
-      ],
-      'd-small': [
-        '0.875rem',
-        {
-          fontWeight: 400
-        }
-      ],
-      'm-medium': [
-        '0.875rem',
-        {
-          fontWeight: 500
-        }
-      ],
-      'd-medium': [
-        '1rem',
-        {
-          fontWeight: 500
-        }
-      ],
+      'm-small': '0.75rem',
+      'd-small': '0.875rem',
+      'd-medium': '1rem',
       'step-title': [
         '0.875rem',
         {
-          fontWeight: 700,
           letterSpacing: '0.065em'
         }
       ],
       'step-number': [
-        '0.875rem',
-        {
-          fontWeight: 700
-        }
+        '0.875rem'
       ]
     }
   },
