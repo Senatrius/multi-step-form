@@ -11,6 +11,12 @@ export const PersonalInfo = ({
 }) => {
   return (
     <>
+      <h1 className='mb-3 text-m-title font-bold text-primary-400 md:text-d-title'>
+        Personal Info
+      </h1>
+      <p className='mb-5 text-paragraph text-placeholder md:mb-9'>
+        Please provide your name, email address, and phone number
+      </p>
       <TextInput
         inputId='name'
         label='Name'

@@ -59,7 +59,7 @@ export const FormWrapper = ({
       <form
         id='form'
         onSubmit={handleSubmit(onSubmit)}
-        className='mx-auto -mt-[4.5rem] mb-8 w-[91.5%] rounded-lg bg-component py-8 px-6'>
+        className='mx-auto -mt-[4.5rem] mb-8 w-[91.5%] rounded-lg bg-component py-8 px-6 shadow-lg'>
         {(() => {
           switch (currStep) {
             case 1:
@@ -77,21 +77,21 @@ export const FormWrapper = ({
           {currStep > 1 && (
             <button
               onClick={() => setCurrStep(prev => prev - 1)}
-              className='text-m-medium md:text-d-medium'>
+              className='text-m-medium font-medium text-placeholder md:text-d-medium'>
               Go Back
             </button>
           )}
           {currStep === 4 && (
             <button
               form='form'
-              className='ml-auto text-m-medium md:text-d-medium'>
-              Submit
+              className='text-m-medium ml-auto rounded-[0.25rem] bg-primary-400 px-4 py-3 font-medium text-white hover:bg-primary-300 focus:bg-primary-300 md:rounded-lg md:px-6 md:py-4 md:text-d-medium'>
+              Confirm
             </button>
           )}
           {currStep < 4 && (
             <button
               onClick={next}
-              className='ml-auto bg-primary-400 px-4 py-3 text-m-medium text-white md:text-d-medium'>
+              className='text-m-medium ml-auto rounded-[0.25rem] bg-primary-400 px-4 py-3 font-medium text-white hover:bg-primary-300 focus:bg-primary-300 md:rounded-lg md:px-6 md:py-4 md:text-d-medium'>
               Next Step
             </button>
           )}
