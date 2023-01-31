@@ -1,6 +1,8 @@
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { TFormData } from './FormWrapper';
+import { Paragraph } from './Paragraph';
 import { TextInput } from './TextInput';
+import { Title } from './Title';
 
 export const PersonalInfo = ({
   register,
@@ -11,12 +13,8 @@ export const PersonalInfo = ({
 }) => {
   return (
     <>
-      <h1 className='mb-3 text-m-title font-bold text-primary-400 md:text-d-title'>
-        Personal Info
-      </h1>
-      <p className='mb-5 text-paragraph text-placeholder md:mb-9'>
-        Please provide your name, email address, and phone number
-      </p>
+      <Title value='Personal info' />
+      <Paragraph value='Please provide your name, email address, and phone number' />
       <TextInput
         inputId='name'
         label='Name'
