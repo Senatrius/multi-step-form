@@ -23,7 +23,9 @@ export const TextInput = ({
           {label}
         </label>
         {error && (
-          <span className='mb-1 text-m-small font-bold text-error md:mb-2 md:text-d-small'>
+          <span
+            id='err'
+            className='mb-1 text-m-small font-bold text-error md:mb-2 md:text-d-small'>
             {error}
           </span>
         )}
@@ -34,6 +36,8 @@ export const TextInput = ({
         }`}
         id={inputId}
         type='text'
+        aria-invalid={error ? true : false}
+        aria-errormessage='err'
         placeholder={placeholder}
         {...register}
       />
