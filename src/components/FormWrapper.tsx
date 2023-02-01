@@ -3,6 +3,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { PersonalInfo } from './PersonalInfo';
+import { Plan } from './Plan';
+import { Button } from './Button';
 
 const defaultValues = {
   name: '',
@@ -24,7 +26,10 @@ const formSchema = z.object({
   phone: z
     .string()
     .min(1, { message: 'This field is required' })
-    .startsWith('+', { message: "Must start with '+' symbol" })
+    .startsWith('+', { message: "Must start with '+' symbol" }),
+  plan: z.string(),
+  addons: z.array(z.string()),
+  term: z.string()
 });
 
 export const FormWrapper = ({
@@ -50,7 +55,7 @@ export const FormWrapper = ({
   };
 
   const next = async () => {
-    const isValid = await trigger(['name', 'email', 'phone']);
+    const isValid = await trigger();
     isValid && setCurrStep(prev => prev + 1);
   };
 
@@ -69,6 +74,8 @@ export const FormWrapper = ({
                   errors={errors}
                 />
               );
+            case 2:
+              return <Plan register={register} />;
           }
         })()}
       </form>
@@ -82,18 +89,17 @@ export const FormWrapper = ({
             </button>
           )}
           {currStep === 4 && (
-            <button
-              form='form'
-              className='text-m-medium ml-auto rounded-[0.25rem] bg-primary-400 px-4 py-3 font-medium text-white hover:bg-primary-300 focus:bg-primary-300 md:rounded-lg md:px-6 md:py-4 md:text-d-medium'>
-              Confirm
-            </button>
+            <Button
+            form="form"
+            click={next}
+            value='Confirm'
+          />
           )}
           {currStep < 4 && (
-            <button
-              onClick={next}
-              className='text-m-medium ml-auto rounded-[0.25rem] bg-primary-400 px-4 py-3 font-medium text-white hover:bg-primary-300 focus:bg-primary-300 md:rounded-lg md:px-6 md:py-4 md:text-d-medium'>
-              Next Step
-            </button>
+            <Button
+              click={next}
+              value='Next Step'
+            />
           )}
         </div>
       </footer>
