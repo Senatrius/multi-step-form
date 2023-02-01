@@ -90,10 +90,9 @@ export const FormWrapper = ({
           )}
           {currStep === 4 && (
             <Button
-            form="form"
-            click={next}
-            value='Confirm'
-          />
+              form='form'
+              value='Confirm'
+            />
           )}
           {currStep < 4 && (
             <Button

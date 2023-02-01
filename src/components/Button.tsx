@@ -6,7 +6,7 @@ export const Button = ({
   form
 }: {
   value: string;
-  click: () => void;
+  click?: () => void;
   form?: string;
 }) => {
   return (

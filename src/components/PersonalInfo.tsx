@@ -3,6 +3,7 @@ import { TFormData } from './FormWrapper';
 import { Paragraph } from './Paragraph';
 import { TextInput } from './TextInput';
 import { Title } from './Title';
+import { Toggle } from './Toggle';
 
 export const PersonalInfo = ({
   register,
@@ -15,6 +16,7 @@ export const PersonalInfo = ({
     <>
       <Title value='Personal info' />
       <Paragraph value='Please provide your name, email address, and phone number' />
+      <Toggle />
       <TextInput
         inputId='name'
         label='Name'
